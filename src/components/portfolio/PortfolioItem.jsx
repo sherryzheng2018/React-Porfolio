@@ -1,29 +1,13 @@
-import "./menu.scss"
+import { GitHub } from "@material-ui/icons"
 
-function PortfolioItem({ appUrl, appImg, }) {
+export default function PortfolioItem({ appUrl, appImg, appTitle, githubLink}) {
     return (
-        // <div className={"menu " + (menuOpen && "active")}>
-        //     <ul>
-        //         <li onClick={()=>setMenuOpen(false)}>
-        //             <a href="#intro">Home</a>
-        //         </li>
-        //         <li onClick={()=>setMenuOpen(false)}>
-        //             <a href="#portfolio">Portfolio</a>
-        //         </li>
-        //         <li onClick={()=>setMenuOpen(false)}>
-        //             <a href="#contact">Contact</a>
-        //         </li>
-        //     </ul>
-        // </div>
-
-
-
         <div className="item">
-            <a href="https://sherryzheng2018.github.io/weather-dashboard/" target="_blank" rel="noopener noreferrer">
-                <img src="./assets/weather-dashboard1.png" alt="Weather Dashboard" />
+            <a href={appUrl} target="_blank" rel="noopener noreferrer">
+                <img src={appImg} alt=""/>
             </a>
-            <h3>Weather Dashboard
-                <a className="github" href="https://github.com/sherryzheng2018/weather-dashboard" target="_blank" rel="noopener noreferrer">
+            <h3> {appTitle}
+                <a className="github" href={githubLink} target="_blank" rel="noopener noreferrer">
                     <GitHub />
                 </a>
             </h3>
@@ -31,4 +15,3 @@ function PortfolioItem({ appUrl, appImg, }) {
     )
 }
 
-export default PortfolioItem
